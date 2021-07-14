@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.AutocompleteContainer {
+  position: absolute;
+  z-index: 10;
+
+}
+
+a {
+   text-decoration: none;
+   display:block;
+   width: 330px;
+   padding: 10px;
+}
+
+.tag-link div {
+  color: white;
+}
+
+.dont-show {
+  display: none;
+}

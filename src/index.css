@@ -32,3 +32,7 @@ a {
 .dont-show {
   display: none;
 }
+
+.tag-link div.dark {  
+  color:black;
+}

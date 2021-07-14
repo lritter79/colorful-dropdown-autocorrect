@@ -16,10 +16,9 @@ function ItemLink({item, index}) {
             style={{backgroundColor: hasMouseOver ? `light${item.color}` : item.color}}  class="tag-link" href="https://bandcamp.com/tag/electronic?from=autocomplete">
                 <div className={`item-link ${hasMouseOver ? textColorFunction(`light${item.color}`): textColorFunction(item.color)}`}>
                   {item.link}
+                  <span className="arrow"></span>
                 </div>
-                <div className="shape-container">
-                    <span className="arrow"></span>
-                </div>
+
             </a>
     );
   }

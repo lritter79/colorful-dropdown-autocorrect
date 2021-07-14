@@ -36,3 +36,11 @@ a {
 .tag-link div.dark {  
   color:black;
 }
+
+.arrow {
+  float: right;
+  font-weight: bolder;
+}
+.arrow::after{
+  content: "\27A4";
+}

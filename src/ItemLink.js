@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
-function ItemLink({item, index}) {    
+function ItemLink({item, index, setShowAutocompleteContainer}) {    
   const [hasMouseOver, setHasMouseOver] = useState(false)
   const textColorFunction = (color) => {
     if (color.includes("light")){
@@ -10,16 +11,20 @@ function ItemLink({item, index}) {
     }
   }
     return (
-            <a key={index} 
+            <div 
             onMouseEnter={() => setHasMouseOver(true)}
         onMouseLeave={() => setHasMouseOver(false)}
-            style={{backgroundColor: hasMouseOver ? `light${item.color}` : item.color}}  class="tag-link" href="https://bandcamp.com/tag/electronic?from=autocomplete">
-                <div className={`item-link ${hasMouseOver ? textColorFunction(`light${item.color}`): textColorFunction(item.color)}`}>
-                  {item.link}
-                  <span className="arrow"></span>
+            style={{backgroundColor: hasMouseOver ? `light${item.color}` : item.color}}  class="tag-link">
+                
+                  <Link to={`/${index + 1}`} onClick={() => setShowAutocompleteContainer(false)}>
+                  <div className={`item-link ${hasMouseOver ? textColorFunction(`light${item.color}`): textColorFunction(item.color)}`}>
+                    {item.link}
+                    <span className="arrow"></span>
                 </div>
+                    </Link>
+                  
 
-            </a>
+            </div>
     );
   }
   

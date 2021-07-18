@@ -11,11 +11,11 @@ function Header() {
         tabindex="1" 
         autocomplete="off" 
         onFocus={() => setShowAutocompleteContainer(true)}
-        onBlur={() => setShowAutocompleteContainer(false)}
+       
         maxlength="2048">
 
         </input>
-        <AutocompleteContainer showAutocompleteContainer={showAutocompleteContainer}/>
+        <AutocompleteContainer showAutocompleteContainer={showAutocompleteContainer} setShowAutocompleteContainer={setShowAutocompleteContainer}/>
       </div>
     );
   }

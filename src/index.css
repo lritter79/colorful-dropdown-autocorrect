@@ -44,3 +44,9 @@ a {
 .arrow::after{
   content: "\27A4";
 }
+
+.link {
+
+padding-left: 50%;
+
+}

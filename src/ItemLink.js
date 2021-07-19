@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-function ItemLink({item, index, setShowAutocompleteContainer}) {    
+function ItemLink({item, index, showAutocompleteContainer, setShowAutocompleteContainer}) {    
   const [hasMouseOver, setHasMouseOver] = useState(false)
   const textColorFunction = (color) => {
     if (color.includes("light")){

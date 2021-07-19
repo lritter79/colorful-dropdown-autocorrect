@@ -5,13 +5,13 @@ function AutocompleteContainer({showAutocompleteContainer, setShowAutocompleteCo
     
 
     return (
-      <div className={`AutocompleteContainer ${showAutocompleteContainer ? "" : "dont-show"}`}>
+      
+      <div className={`AutocompleteContainer`}>
         {Items.map((item, index) => (
             <div key={index}>
-              <ItemLink item={item} index={index} setShowAutocompleteContainer={setShowAutocompleteContainer} />
-            </div>
-            
-        ))}
+              <ItemLink item={item} index={index} showAutocompleteContainer={showAutocompleteContainer} setShowAutocompleteContainer={setShowAutocompleteContainer} />
+            </div>)
+            )}
       </div>
     );
   }

@@ -1,7 +1,11 @@
+import Items from "../Items";
+
 function Link2 () {    
 
       return (
-              <div>
+              <div className="link" 
+                style={{backgroundColor: Items[1].color}}
+              >
                   Link 2
               </div>
       );
